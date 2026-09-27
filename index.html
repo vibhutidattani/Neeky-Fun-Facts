@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Neeky Fun Facts — a public notebook of curious things." />
+    <title>Neeky Fun Facts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Special+Elite&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="notebook">
+      <header class="masthead">
+        <a class="wordmark" href="index.html" aria-label="Neeky Fun Facts home">neeky fun facts</a>
+        <a class="submit-link" data-submit-link href="#submit">submit a fact <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">A little public notebook</p>
+        <h1 id="page-title">Facts worth writing down.</h1>
+        <p>Odd things, clever ideas, and tiny discoveries—from maths to psychology and everything in between.</p>
+      </section>
+
+      <section class="fact-index" aria-labelledby="facts-heading">
+        <div class="section-heading">
+          <p class="section-number">01</p>
+          <h2 id="facts-heading">The facts</h2>
+          <p id="fact-count" class="fact-count" aria-live="polite"></p>
+        </div>
+
+        <div class="filters" aria-label="Filter facts by category">
+          <button class="filter is-active" type="button" data-category="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-category="maths" aria-pressed="false">Maths</button>
+          <button class="filter" type="button" data-category="physics" aria-pressed="false">Physics</button>
+          <button class="filter" type="button" data-category="psychology" aria-pressed="false">Psychology</button>
+        </div>
+
+        <div id="facts" class="facts" aria-live="polite"></div>
+
+        <div id="empty-state" class="empty-state">
+          <p class="empty-mark" aria-hidden="true">✳</p>
+          <h3>The notebook is blank—for now.</h3>
+          <p>The first curious fact is waiting to be written down.</p>
+        </div>
+      </section>
+
+      <section id="submit" class="submit-note" aria-labelledby="submit-heading">
+        <p class="section-number">02</p>
+        <h2 id="submit-heading">Know something neat?</h2>
+        <p>Send it in anonymously. Every submission is reviewed before it appears here, and approved contributors can be credited by name.</p>
+        <a class="button" data-submit-link href="#submit">Submission form coming soon</a>
+      </section>
+
+      <footer>
+        <span>Made with curiosity.</span>
+        <span>© <span id="year"></span> Neeky Fun Facts</span>
+      </footer>
+    </main>
+    <script src="data/site-config.js"></script>
+    <script src="data/facts.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
